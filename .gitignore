@@ -3,3 +3,6 @@ dex-config.yaml
 emails.txt
 *.db
 dex.db
+
+# Claude Code local settings
+.claude/settings.local.json
