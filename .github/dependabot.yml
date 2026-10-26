@@ -5,7 +5,8 @@ updates:
     directory: /
     target-branch: main
     schedule:
-      interval: monthly
+      interval: weekly
+      day: monday
       time: "09:00"
       timezone: Asia/Bangkok
     open-pull-requests-limit: 5
@@ -27,7 +28,8 @@ updates:
     directory: /
     target-branch: main
     schedule:
-      interval: monthly
+      interval: weekly
+      day: monday
       time: "09:00"
       timezone: Asia/Bangkok
     open-pull-requests-limit: 5
