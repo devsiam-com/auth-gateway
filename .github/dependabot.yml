@@ -5,8 +5,7 @@ updates:
     directory: /
     target-branch: main
     schedule:
-      interval: weekly
-      day: monday
+      interval: monthly
       time: "09:00"
       timezone: Asia/Bangkok
     open-pull-requests-limit: 5
@@ -14,13 +13,21 @@ updates:
       - dependencies
     commit-message:
       prefix: "chore(deps)"
+    # minor + patch = 1 PR · major = 1 PR ต่อ image
+    groups:
+      docker-minor-patch:
+        update-types:
+          - minor
+          - patch
+        patterns:
+          - "*"
 
+  # ทุกอย่างรวมเป็น 1 PR
   - package-ecosystem: github-actions
     directory: /
     target-branch: main
     schedule:
-      interval: weekly
-      day: monday
+      interval: monthly
       time: "09:00"
       timezone: Asia/Bangkok
     open-pull-requests-limit: 5
@@ -28,3 +35,7 @@ updates:
       - dependencies
     commit-message:
       prefix: "chore(deps)"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
