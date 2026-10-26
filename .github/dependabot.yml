@@ -14,7 +14,16 @@ updates:
       - dependencies
     commit-message:
       prefix: "chore(deps)"
+    # minor + patch = 1 PR · major = 1 PR ต่อ image
+    groups:
+      docker-minor-patch:
+        update-types:
+          - minor
+          - patch
+        patterns:
+          - "*"
 
+  # ทุกอย่างรวมเป็น 1 PR
   - package-ecosystem: github-actions
     directory: /
     target-branch: main
@@ -28,3 +37,7 @@ updates:
       - dependencies
     commit-message:
       prefix: "chore(deps)"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
