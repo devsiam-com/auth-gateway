@@ -14,7 +14,7 @@ RUN go get golang.org/x/net@v0.60.0 github.com/go-jose/go-jose/v4@v4.1.6 && \
 RUN CGO_ENABLED=1 GOFLAGS="-trimpath" go build -o /app/dex ./cmd/dex
 
 # runtime
-FROM alpine:3.23
+FROM alpine:3.24
 
 # apk upgrade pulls the patched zlib (>= 1.3.2, CVE-2026-22184) from the stable repo
 RUN apk upgrade --no-cache && \
