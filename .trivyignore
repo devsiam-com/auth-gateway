@@ -18,3 +18,5 @@ CVE-2026-78667 exp:2026-12-31
 CVE-2026-78669 exp:2026-12-31
 # Go stdlib 1.26.8 -> fixed in 1.26.9 / 1.27.2
 CVE-2026-97031 exp:2026-12-31
+# go-jose/v4 v4.1.5 -> fixed in 4.1.6 (dex image is patched in Dockerfile)
+CVE-2026-116587 exp:2026-12-31
